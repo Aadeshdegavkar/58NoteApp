@@ -45,7 +45,7 @@ app.delete("/note/:id",async(req, res) => {
     const note = await NoteModel.findByIdAndDelete(noteId);
 
 
-    res.status().json({
+    res.status(404).json({
         "message":"Note deleted successfully.....",
         "data":note
     })
